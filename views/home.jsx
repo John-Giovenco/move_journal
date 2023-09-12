@@ -5,7 +5,10 @@ function home() {
   return (
     <Def>
       <main>
-        <h1>HOME</h1>
+        <h1>Jiu Jitsu Journal</h1>
+        <a href="/moves">
+          <button className="btn-primary">Moves Page</button>
+        </a>
       </main>
     </Def>
   );
