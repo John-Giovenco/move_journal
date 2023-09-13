@@ -1,8 +1,26 @@
 const router = require("express").Router();
-const app = router;
+const moves = require("../models/moves.js");
+
+router.get("/new", (req, res) => {
+  res.render("moves/new");
+});
+
+router.post("/", (req, res) => {
+  console.log(req.body);
+  if (!req.body.pic) {
+    // default image if no image is provided
+    req.body.pic =
+      "http://www.alliancecarlsbad.com/wp-content/uploads/2017/04/Jacare-thumbs-up.jpg";
+  }
+  if (!req.body.position) {
+    req.body.position = "You can hit this from anywhere!";
+  }
+  moves.push(req.body);
+  res.redirect("/moves");
+});
 
 //GET / moves
-app.get("/", (req, res) => {
+router.get("/", (req, res) => {
   let moves = [
     {
       name: "Rear Naked Choke",

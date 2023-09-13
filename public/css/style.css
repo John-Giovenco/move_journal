@@ -3,6 +3,10 @@ h1 {
   color: #fefcfc;
 }
 
+h2 {
+  color: #fefcfc;
+}
+
 main {
   background-color: black;
 }
@@ -15,4 +19,10 @@ p {
 img {
   width: 500;
   height: 400;
+}
+
+label {
+  color: #fefcfc;
+  font-size: x-large;
+  padding: 1rem;
 }
