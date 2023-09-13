@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const moves = require("../models/moves.js");
+const moves = require("../models/moves");
 
 router.get("/new", (req, res) => {
   res.render("moves/new");
@@ -21,22 +21,6 @@ router.post("/", (req, res) => {
 
 //GET / moves
 router.get("/", (req, res) => {
-  let moves = [
-    {
-      name: "Rear Naked Choke",
-      position: "Back Mount",
-      submission: "true",
-      escape: "false",
-      pic: "/images/cartoon_rearnakedchoke.webp",
-    },
-    {
-      name: "Arm Bar",
-      position: "mount",
-      submission: "true",
-      escape: "false",
-      pic: "/images/armbar_pic.jpg",
-    },
-  ];
   res.render("moves/index", { moves });
 });
 
