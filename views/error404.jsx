@@ -6,7 +6,15 @@ function error404() {
     <Def>
       <main>
         <h1>404 page</h1>
-        <p>Sorry you've been submitted and cant find that page</p>
+        <p>Sorry cant find that page, you've been submitted!</p>
+        <div>
+          <img
+            width="900"
+            height="600"
+            src="/images/Rear-cross-collar-choke.jpg"
+            alt="collar choke"
+          />
+        </div>
       </main>
     </Def>
   );

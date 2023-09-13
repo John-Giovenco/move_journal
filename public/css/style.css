@@ -7,6 +7,12 @@ main {
   background-color: black;
 }
 
-button {
-  color: #a72608;
+p {
+  color: #fefcfc;
+  font-size: xx-large;
+}
+
+img {
+  width: 500;
+  height: 400;
 }

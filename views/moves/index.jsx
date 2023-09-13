@@ -4,9 +4,13 @@ const Def = require("../default");
 function index(data) {
   let movesFormatted = data.moves.map((move) => {
     return (
-      <div>
-        <h1>{move.name}</h1>
+      <div className="col-sm-6">
+        <h2>{move.name}</h2>
+        <p className="text-center">{move.position}</p>
         <img src={move.pic} alt={move.name} />
+        <p className="text-center">
+          This move is a {move.submission}, {move.escape}
+        </p>
       </div>
     );
   });
@@ -14,7 +18,7 @@ function index(data) {
     <Def>
       <main>
         <h1>MOVES INDEX PAGE</h1>
-        {movesFormatted}
+        <div className="row">{movesFormatted}</div>
       </main>
     </Def>
   );

@@ -9,14 +9,14 @@ app.get("/", (req, res) => {
       position: "Back Mount",
       submission: "true",
       escape: "false",
-      pic: "https://i1.wp.com/www.studentofbjj.com/wp-content/uploads/2017/02/rearnakedchoke.png?resize=648%2C458&ssl=1",
+      pic: "/images/cartoon_rearnakedchoke.webp",
     },
     {
       name: "Arm Bar",
       position: "mount",
-      submission: true,
-      escape: false,
-      pic: "https://www.ultimatejujitsu.com/images/techniques/armbar-from-the-guard/7.jpg",
+      submission: "true",
+      escape: "false",
+      pic: "/images/armbar_pic.jpg",
     },
   ];
   res.render("moves/index", { moves });
