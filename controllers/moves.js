@@ -1,6 +1,17 @@
 const router = require("express").Router();
 const moves = require("../models/moves");
 
+router.get("/:id", (req, res) => {
+  let id = Number(req.params.id);
+  if (isNaN(id)) {
+    res.render("error404");
+  } else if (!moves[id]) {
+    res.render("error404");
+  } else {
+    res.render("moves/show", { move: moves[id] });
+  }
+});
+
 router.get("/new", (req, res) => {
   res.render("moves/new");
 });
