@@ -9,6 +9,13 @@ h2 {
 
 main {
   background-color: black;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+body {
+  background-color: steelblue;
+  text-align: center;
 }
 
 p {
@@ -25,4 +32,31 @@ label {
   color: #fefcfc;
   font-size: x-large;
   padding: 1rem;
+}
+
+nav {
+  background-color: steelblue;
+  padding: 10px;
+  font-size: x-large;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+}
+
+nav li {
+  display: inline;
+  margin-right: 25px;
+}
+
+nav a {
+  color: #fefcfc;
+}
+
+nav a:hover {
+  color: black;
+  text-decoration: none;
 }

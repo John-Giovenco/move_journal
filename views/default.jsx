@@ -13,7 +13,22 @@ function Def(html) {
           crossOrigin="anonymous"
         />
       </head>
-      <body>{html.children}</body>
+      <body>
+        <nav>
+          <ul>
+            <li>
+              <a href="/">Home</a>
+            </li>
+            <li>
+              <a href="/moves">Moves</a>
+            </li>
+            <li>
+              <a href="/moves/new">Add Move</a>
+            </li>
+          </ul>
+        </nav>
+        {html.children}
+      </body>
     </html>
   );
 }
