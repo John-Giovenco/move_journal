@@ -38,6 +38,18 @@ router.get("/:id", (req, res) => {
   }
 });
 
+// Edit Route
+router.get("/:id/edit", (req, res) => {
+  let id = Number(req.params.id);
+  if (isNaN(id)) {
+    res.render("error404");
+  } else if (!moves[id]) {
+    res.render("error404");
+  } else {
+    res.render("moves/edit", { move: moves[id] });
+  }
+});
+
 // Delete route
 router.delete("/:id", (req, res) => {
   let id = Number(req.params.id);
