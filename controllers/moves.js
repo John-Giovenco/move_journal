@@ -1,21 +1,7 @@
 const router = require("express").Router();
 const moves = require("../models/moves");
 
-router.get("/:id", (req, res) => {
-  let id = Number(req.params.id);
-  if (isNaN(id)) {
-    res.render("error404");
-  } else if (!moves[id]) {
-    res.render("error404");
-  } else {
-    res.render("moves/show", { move: moves[id] });
-  }
-});
-
-router.get("/new", (req, res) => {
-  res.render("moves/new");
-});
-
+// Default post data
 router.post("/", (req, res) => {
   console.log(req.body);
   if (!req.body.pic) {
@@ -33,6 +19,36 @@ router.post("/", (req, res) => {
 //GET / moves
 router.get("/", (req, res) => {
   res.render("moves/index", { moves });
+});
+
+// New Moves Route
+router.get("/new", (req, res) => {
+  res.render("moves/new");
+});
+
+// Show route
+router.get("/:id", (req, res) => {
+  let id = Number(req.params.id);
+  if (isNaN(id)) {
+    res.render("error404");
+  } else if (!moves[id]) {
+    res.render("error404");
+  } else {
+    res.render("moves/show", { move: moves[id], id });
+  }
+});
+
+// Delete route
+router.delete("/:id", (req, res) => {
+  let id = Number(req.params.id);
+  if (isNaN(id)) {
+    res.render("error404");
+  } else if (!moves[id]) {
+    res.render("error404");
+  } else {
+    moves.splice(id, 1);
+    res.redirect("/moves");
+  }
 });
 
 module.exports = router;
