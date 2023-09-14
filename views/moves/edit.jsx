@@ -14,7 +14,7 @@ function edit(data) {
                 className="form-control"
                 id="name"
                 name="name"
-                value={data.move.name}
+                defaultValue={data.move.name}
                 required
               />
             </div>
@@ -25,7 +25,7 @@ function edit(data) {
                 type="url"
                 id="pic"
                 name="pic"
-                value={data.move.pic}
+                defaultValue={data.move.pic}
               />
             </div>
             <div className="form-group col-sm-6">
@@ -34,7 +34,7 @@ function edit(data) {
                 className="form-control"
                 id="position"
                 name="position"
-                value={data.move.position}
+                defaultValue={data.move.position}
               />
             </div>
             <div className="form-group col-sm-6">
@@ -44,7 +44,7 @@ function edit(data) {
                 id="type"
                 name="type"
                 required
-                value={data.move.type}
+                defaultValue={data.move.type}
               />
             </div>
             <div className="form-group col-sm-6">
@@ -53,14 +53,14 @@ function edit(data) {
                 className="form-control"
                 id="description"
                 name="description"
-                value={data.move.description}
+                defaultValue={data.move.description}
                 required
               />
             </div>
             <input
               className="btn btn-primary"
               type="submit"
-              value="Edit Move"
+              defaultValue="Edit Move"
             />
           </div>
         </form>
