@@ -32,6 +32,10 @@ function newForm() {
               required
             />
           </div>
+          <div>
+            <label htmlFor="learned">Date learned</label>
+            <input className="form-control" type="text" name="date" id="date" />
+          </div>
           <input className="btn btn-primary" type="submit" value="Add Move" />
         </form>
       </main>

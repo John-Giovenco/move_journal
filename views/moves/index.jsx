@@ -2,13 +2,11 @@ const React = require("react");
 const Def = require("../default");
 
 function index(data) {
-  let movesFormatted = data.moves.map((move, index) => {
+  let movesFormatted = data.moves.map((move) => {
     return (
       <div className="col-sm-6">
         <h2>
-          <a href={`/moves/${index}`}>
-            {move.name}
-          </a>
+          <a href={`/moves/${move.id}`}>{move.name}</a>
         </h2>
         <p className="text-center">{move.position}</p>
         <img src={move.pic} alt={move.name} />

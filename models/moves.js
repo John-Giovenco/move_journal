@@ -1,16 +1,12 @@
-module.exports = [
-  {
-    name: "Rear Naked Choke",
-    position: "Back Mount",
-    submission: "true",
-    escape: "false",
-    pic: "/images/cartoon_rearnakedchoke.webp",
-  },
-  {
-    name: "Arm Bar",
-    position: "mount",
-    submission: "true",
-    escape: "false",
-    pic: "/images/armbar_pic.jpg",
-  },
-];
+const mongoose = require("mongoose");
+
+const moveSchema = new mongoose.Schema({
+  name: { type: String, required: true },
+  pic: { type: String },
+  position: { type: String },
+  type: { type: String },
+  description: { type: String, required: true },
+  date_added: { type: Date },
+});
+
+module.exports = mongoose.model("Moves", moveSchema);
