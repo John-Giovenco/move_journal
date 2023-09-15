@@ -7,3 +7,4 @@ mongoose.connect(process.env.MONGO_URI, {
 });
 
 module.exports.Move = require("./moves");
+module.exports.Comment = require("./comment");

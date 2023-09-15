@@ -7,6 +7,8 @@ const moveSchema = new mongoose.Schema({
   position: { type: String, required: true },
   description: { type: String, required: true },
   date_added: { type: Date, default: Date.now },
+
+  comments: [{ type: mongoose.Schema.Types.ObjectId, ref: "Comment" }],
 });
 
 moveSchema.methods.showLearned = function () {
