@@ -2,7 +2,6 @@ const db = require("../models");
 
 // To use await, we need an async function.
 async function seed() {
-  // Get the move, H-Thai-ML
   let move = await db.Move.findOne({ name: "Rear Naked Chokes" });
 
   //fake sample comment
