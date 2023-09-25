@@ -1,6 +1,21 @@
-# project BJJ Journal
+# project Move Journal
 
-BJJ-Journal is an app where users can add moves they have learned along with see how other practicioners execute their favorite moves.
+Move Journal is an app where users can add moves they have learned in any martial arts class,along with see how other practicioners execute their favorite moves. Users are able to create a move with a description and then other users can give comments and tips on how the moves are executed.
+
+It is a simple app that utilizes a mongodb database, express, react on the front-end (though it is not a react app) and node.js to handle the communication on the backend.
+
+Future uploads will ensure the user login and sign up functionality with be functional.
+
+Dependencies needed for this project are -
+bcrypt,
+cors,
+dotenv,
+express,
+express-react-views,
+jsonwebtoken,
+method-override,
+mongoose,
+react,
 
 routes
 Method -- Path -- Purpose
@@ -18,7 +33,9 @@ GET -- \* -- 404 page
 
 Data needed for moves -
 name (STRING)
+picture (STRING)
 position (STRING)
-submission (BOOLEAN)
-escape (BOOLEAN)
+type (STRING)
+description (STRING)
 pic(STRING)
+date_learned(STRING)

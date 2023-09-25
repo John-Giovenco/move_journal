@@ -25,6 +25,12 @@ function Def(html) {
             <li>
               <a href="/moves/new">Add Move</a>
             </li>
+            <li>
+              <a href="users/login">Login</a>
+            </li>
+            <li>
+              <a href="users/signup">Sign Up</a>
+            </li>
           </ul>
         </nav>
         {html.children}

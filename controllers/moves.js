@@ -35,7 +35,6 @@ router.get("/:id", (req, res) => {
   db.Move.findById(req.params.id)
     .populate("comments")
     .then((move) => {
-      //console.log(move.comments);
       res.render("moves/show", { move });
     })
     .catch((err) => {

@@ -14,6 +14,7 @@ app.use(methodOverride("_method"));
 
 // controllers and routes
 app.use("/moves", require("./controllers/moves"));
+app.use("/users", require("./controllers/users"));
 
 app.get("/", (req, res) => {
   res.render("home");
@@ -23,4 +24,4 @@ app.get("*", (req, res) => {
   res.render("error404");
 });
 
-app.listen(process.env.PORT);
+app.listen(process.env.PORT, console.log("running on 5000"));
